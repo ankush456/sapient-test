@@ -1,0 +1,30 @@
+.cart-data{
+  border-bottom: 10px solid rgba(0,0,0,0.1);
+}
+.edit-data{
+  border-top: 10px solid rgba(0,0,0,0.1);
+}
+.data{
+  text-transform: capitalize;
+}
+.image-cloth{
+  width: 100px;
+}
+.edit-cart-image{
+    height: 47%;
+    width: 30%;
+  }
+.color{
+  height: 10px;
+  width: 10px;
+}
+.main-content{
+  border-bottom: 10px solid rgba(0,0,0,0.1);
+}
+.quantity{
+  padding-top: 5px !important;
+  padding-left: 10px !important;
+}
+.hover{
+  cursor: pointer;
+}

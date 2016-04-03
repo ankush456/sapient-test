@@ -1,0 +1,114 @@
+<div flex="auto" flex-sm="column" flex-md="column">
+  <md-content layout="column" class="margin-lr-20 main-content">
+    <h1 class="md-display-3">YOUR SHOPPING BAG</h1>
+    <md-divider class="" flex="" flex-sm="" flex-md="">
+
+    </md-divider>
+         <!-- <md-card flex="auto"  layout-fill="" ng-repeat="goal in goals">
+
+
+          </md-card>-->
+    <div layout="row" hide-sm hide-md class="cart-data margin-d-20" flex="auto">
+      <div flex="50">
+        <p>3 Items</p>
+      </div>
+      <div flex="">
+        <p>Size</p>
+      </div>
+
+      <div flex="">
+     <p>Qty</p>
+      </div>
+
+      <div flex="">
+        <p>Price</p>
+      </div>
+    </div>
+
+    <div layout="row" layout-sm="column" layout-md="column" class="data margin-td-20" flex="auto" ng-repeat="data in cartData">
+      <div flex="50" flex-sm="100" layout="row">
+        <img class="margin-r-20 image-cloth" src="{{imageurl[$index]}}"/>
+      <div layout="column" flex="auto">
+        <b>{{data.p_name}}</b>
+        <p class="margin-0 margin-t-10">Style #:&nbsp{{data.p_style}}</p>
+        <div class="margin-r-10" layout="row">Color:
+          &nbsp<p class="margin-0 data">
+            {{data.p_selected_color.name}}
+          </p>
+        </div>
+        <div layout="row" flex="auto" hide-gt-md class="margin-t-20">
+          <div class="" flex="30">
+            <p layout="row" layout-align="start center" flex="30" class="pad-l-10">{{data.p_selected_size.code}}</p>
+          </div>
+
+          <div flex="20" class="margin-t-20 margin-l-10">
+            <input flex="70" type="number" ng-model="data.p_quantity">
+          </div>
+
+          <div flex="">
+            <p>{{data.p_price *data.p_quantity | currency}}</p>
+          </div>
+        </div>
+        <div layout="row" flex="auto" layout-align="start end">
+          <md-button class="margin-r-10" ng-click="editCart($event,data,imageurl[$index])">Edit</md-button>
+          <md-button class="margin-r-10 margin-l-20 hover" ng-click="deleteCart($event,$index)">X Remove</md-button>
+          <p hide-sm hide-md>Save for Later</p>
+        </div>
+      </div>
+      </div>
+      <div layout="row" flex="auto" hide-sm hide-md>
+      <div class="margin-r-10" flex="auto">
+       <p layout="row" layout-align="start center" flex="10" class="pad-l-10">{{data.p_selected_size.code}}</p>
+      </div>
+
+      <div flex="" class="margin-t-10">
+       <input flex="20" type="number" ng-model="data.p_quantity">
+      </div>
+
+      <div flex="">
+       <p>{{data.p_price *data.p_quantity | currency}}</p>
+      </div>
+      </div>
+    </div>
+
+    <div layout="row"layout-sm="column" class="edit-data margin-td-20">
+      <div flex="40" layout="column" hide-sm="" hide-md class="margin-td-10">
+           <p>
+            Need any Help or Questions ?
+           </p>
+        <p>
+          Call customer Service at 1800-xxx-xxx
+        </p>
+      </div>
+      <div flex="auto" layout="column" class="margin-td-10">
+      <div layout="row" layout-sm="column" class="cart-data pad-d-10 margin-lr-20">
+        <p>Enter promotional Code or Gift Card</p>
+        <input class="margin-l-10" type="text"/>
+        <md-button class="pad-lr-10">Apply</md-button>
+      </div>
+
+        <div layout="row" class="pad-d-10">
+          <p flex="auto">Subtotal</p>
+          <p>{{totalPrice}}</p>
+        </div>
+        <div layout="row" class="pad-d-10">
+          <p flex="auto">Promotional Code</p>
+          <p>0</p>
+        </div>
+        <md-divider></md-divider>
+        <div layout="row" class="pad-d-10">
+          <h3 flex="auto">Estimated Total</h3>
+          <b>{{totalPrice}}</b>
+        </div>
+
+      </div>
+    </div>
+
+
+  </md-content>
+
+
+
+</div>
+
+

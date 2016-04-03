@@ -1,0 +1,26 @@
+.delete-popup-container {
+  md-dialog-content {
+    margin: 15px 10px 15px 18px;
+    p{
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    button {
+      margin-bottom: 0;
+    }
+  }
+  a.md-button.md-default-theme.md-primary, a.md-button.md-primary, .md-button.md-default-theme.md-primary, .md-button.md-primary{
+    color: $primary-color;
+  }
+  md-toolbar {
+    color: $primary-color-text;
+    background-color: $primary-color;
+
+    md-icon {
+      color: $primary-color-text;
+    }
+    button {
+      max-width: 35px;
+    }
+  }
+}
